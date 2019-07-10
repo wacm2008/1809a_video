@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use OSS\OssClient;
+use OSS\Core\OssException;
 class TestController extends Controller
 {
     protected $accessKeyId = 'LTAIGAO5tHCm7z4k';
