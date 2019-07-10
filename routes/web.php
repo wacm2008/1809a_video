@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/oss1','TestController@oss1');
+Route::get('/oss2','TestController@oss2');

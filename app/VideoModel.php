@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UsersModel extends Model
+class VideoModel extends Model
 {
-    protected $table='p_user';
+    protected $table='p_videos';
     public $timestamps=false;
-    protected $primaryKey='uid';
+    protected $primaryKey='vid';
 }
