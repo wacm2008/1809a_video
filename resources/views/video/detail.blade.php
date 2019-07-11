@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h3>despedida de Andrés Iniesta</h3>
     <video src="{{env('HOST')}}/{{$videoDetail['path']}}" controls="controls"></video>
 </body>
 </html>
