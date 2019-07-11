@@ -15,9 +15,10 @@ class CronController extends Controller
     public function saveToOss()
     {
         $ossClient = new OssClient($this->accessKeyId, $this->accessKeySecret, env('EndPoint'));
-        //获取目录中文件
+        //获取目录
         $filePath = storage_path('app/public/files');
         //echo $filePath;die;
+        //获取目录中文件
         $fileList = scandir($filePath);
         //print_r($fileList);die;
         foreach ($fileList as $k=>$v){
@@ -26,7 +27,7 @@ class CronController extends Controller
             }
             $extension = pathinfo($v,PATHINFO_EXTENSION);
             //echo $extension;
-            $object = 'img/'.Str::random(6).'.'.$extension;
+            $object = 'files/'.Str::random(6).'.'.$extension;
             $local_file = $filePath.'/'.$v;
             //echo $local_file;
             //$oss = $ossClient->uploadFile($this->bucket,$object,$local_file);
@@ -38,7 +39,7 @@ class CronController extends Controller
                 printf($e->getMessage() . "\n");
                 return;
             }
-            echo 'bien';
+            echo 'bien';echo '</br>';
             //上传后删除文件
             unlink($local_file);
         }
