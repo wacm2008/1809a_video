@@ -27,7 +27,7 @@ class CronController extends Controller
             }
             $extension = pathinfo($v,PATHINFO_EXTENSION);
             //echo $extension;
-            $object = 'files/'.Str::random(6).'.'.$extension;
+            $object = 'files/'.$v;
             $local_file = $filePath.'/'.$v;
             //echo $local_file;
             //$oss = $ossClient->uploadFile($this->bucket,$object,$local_file);
