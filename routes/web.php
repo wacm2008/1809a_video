@@ -18,3 +18,4 @@ Route::get('/oss1','TestController@oss1');
 Route::get('/oss2','TestController@oss2');
 Route::get('/oss3','CronController@saveToOss');
 Route::get('/videodetail/{vid}','VideoDetailController@videoDetail');
+Route::post('/notify','NotifyController@notify');
