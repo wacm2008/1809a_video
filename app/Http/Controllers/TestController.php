@@ -7,9 +7,9 @@ use OSS\OssClient;
 use OSS\Core\OssException;
 class TestController extends Controller
 {
-    protected $accessKeyId = 'LTAIGAO5tHCm7z4k';
-    protected $accessKeySecret = 'WEKCcw0st6QIhgdlQnQfw76RnGQZaB';
-    protected $endpoint = 'WEKCcw0st6QIhgdlQnQfw76RnGQZaB';
+    protected $accessKeyId = '';
+    protected $accessKeySecret = '';
+    protected $endpoint = '';
 
     public function oss1()
     {
